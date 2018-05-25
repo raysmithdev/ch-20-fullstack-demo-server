@@ -21,6 +21,8 @@ app.get('/users', (req, res) => {
     name: 'Ray'
   }, {
     name: 'Jim'
+  }, {
+    name: 'jill'
   }]
 
   res.json(users)
