@@ -16,6 +16,13 @@ app.use(
   })
 );
 
+app.use(
+  cors({
+    origin: CLIENT_ORIGIN
+  })
+);
+
+
 app.get('/users', (req, res) => {
   const users = [{
     name: 'Ray'
@@ -28,11 +35,6 @@ app.get('/users', (req, res) => {
   res.json(users)
 })
 
-app.use(
-  cors({
-    origin: CLIENT_ORIGIN
-  })
-);
 
 function runServer(port = PORT) {
   const server = app
