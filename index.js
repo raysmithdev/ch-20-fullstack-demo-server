@@ -16,6 +16,16 @@ app.use(
   })
 );
 
+app.get('/users', (req, res) => {
+  const users = [{
+    name: 'Ray'
+  }, {
+    name: 'Jim'
+  }]
+
+  res.json(users)
+})
+
 app.use(
   cors({
     origin: CLIENT_ORIGIN
